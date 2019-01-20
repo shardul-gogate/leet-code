@@ -1,4 +1,9 @@
 class Solution {
+	/**
+	* runtime 53 ms
+	* faster than 55%
+	* submissions in Java
+	*/
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int solnArray[]=new int[nums1.length+nums2.length];
 		int i=0,j=0,k=0;
@@ -34,10 +39,4 @@ class Solution {
 			median=(solnArray[(k/2)-1]+solnArray[k/2])/(double)2;
 		return median;
     }
-	public static void main(String args[]) {
-		Solution s=new Solution();
-		int arr1[]=new int[1]; arr1[0]=3;
-		int arr2[]=new int[2]; arr2[0]=-2; arr2[1]=-1;
-		System.out.println(s.findMedianSortedArrays(arr1,arr2));
-	}
 }
